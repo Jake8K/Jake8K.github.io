@@ -65,3 +65,7 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #fff;
 }
+code {
+  text-align: left;
+  color: green;
+}

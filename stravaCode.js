@@ -4,6 +4,7 @@
 Client ID: 16437
 Client Secret:	dd28359ad869748580c826c8018f3676403abe0e
 Your Access Token: e0fe44acef9298ee3d51e683e233e1cd9b00e657 (permissions: public)
+//alt one from pacer: 17227adf262486a142bf1869918444658b774289
 App Name: Cycler
 MY User ID: 7063168
 Rate Limits (?)	600 requests every 15 minutes, 30000 daily
@@ -44,7 +45,6 @@ var authReq = new XMLHttpRequest();
 function bindButtons(){
   document.getElementById('userAuth').addEventListener('click', function(event){
     //resuest user access token
-//    var authReq = new XMLHttpRequest();
     var authUser = new authorize();
     var url = "https://www.strava.com/oauth/authorize?";
     authReq.open('GET', url+"client_id="+authUser.client_id+"&response_type="+authUser.response_type+"&redirect_uri="+authUser.redirect_uri+"&scope="+authUser.scope+"&state="+authUser.state+"&approval_prompt="+authUser.approval_prompt, true);
@@ -236,3 +236,18 @@ function bindPostButton(){
     {"id":"g2058670","primary":false,"name":"Hoka One One Mafate 4 Trail-Running Shoes Heavy Duty Trail Hokas","resource_state":2,"distance":0.0},
     {"id":"g2058668","primary":true,"name":"Hoka One One Challenger ATR 2 Trail-Running Shoes trail hokas","resource_state":2,"distance":0.0}
   ]}
+
+  {"id":861107201,"resource_state":2,"external_id":"garmin_push_1566152597","upload_id":953111624,"athlete":
+  {"id":7063168,"resource_state":1},"name":"Afternoon Run","distance":5472.6,"moving_time":1968,"elapsed_time":1996,
+  "total_elevation_gain":62.0,"type":"Run","start_date":"2017-02-10T00:40:25Z","start_date_local":"2017-02-09T16:40:25Z",
+  "timezone":"(GMT-08:00) America/Los_Angeles","utc_offset":-28800.0,"start_latlng":[32.86,-117.22],
+  "end_latlng":[32.86,-117.22],"location_city":"San Diego","location_state":"California","location_country":"United States",
+  "start_latitude":32.86,"start_longitude":-117.22,"achievement_count":1,"kudos_count":0,
+  "comment_count":0,
+  "athlete_count":1,
+  "photo_count":0,"map":{"id":"a861107201",
+  "summary_polyline":"ippgEzxmjU~Qln@pAjChAgAzCjIbHnHbYrP`SlCnOqA}Pz@_RmCsXsPoMeRgAv@yUsr@gOrK","resource_state":2},
+  "trainer":false,"commute":false,"manual":false,"private":false,"flagged":false,"gear_id":null,"average_speed":2.781,
+  "max_speed":6.9,"average_cadence":76.9,"average_temp":19.0,"has_heartrate":true,"average_heartrate":162.0,
+  "max_heartrate":183.0,"elev_high":124.8,"elev_low":66.6,"pr_count":0,"total_photo_count":0,"has_kudoed":false,
+  "workout_type":null}

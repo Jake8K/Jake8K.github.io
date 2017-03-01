@@ -76,10 +76,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>The Strava (V3) API</h1>
-                  </br>
+                    <h5><a href=https://strava.github.io/api/>Strava's API Documentation</a></h5>
+                    </br>
                     <h3>What's an API?</h3>
                     <p>
-                      An application program interface (API) is a set of routines, protocols, and tools for building software
+                      An <b>application program interface (API)</b> is a set of routines, protocols, and tools for building software
                       applications. An API specifies how software components should interact. Additionally, APIs are used
                       when programming graphical user interface (GUI) components.
                     </p>
@@ -100,7 +101,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>basics Section</h1>
+                  <h1>The Basics</h1>
+                  </br>
+                  <p>
+                    Strava’s documentation is a great resource, especially if your application relies on jquery.
+                    Unfortunately it is a little vague when it comes to make http requests. Additionally, because
+                    of the constraints of this “how to”, we are unable to make CORS ( fill this is ) requests.
+                    That means that while I will go over the basics of getting a user’s authentication token, we
+                    won’t be able to implement it. That means we also won’t be able to test this with your account.
+                    Not to worry though, I’ll show you how to do this for yourself. Additionally, we cannot make POST
+                    requests, as that also requires CORS.
+                    We are going to mine your Strava profile for some awesome data though. I’ll also show you how
+                    to implement a search for other users that like to run your route! That will take us pretty far
+                    down the rabbit hole of the API, so I’m confident we’ll learn a few things about the API and its
+                    logic along the way.
+                  </p>
                 </div>
             </div>
         </div>
@@ -111,7 +126,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>authorization Section</h1>
+                    <h1>Authorization</h1>
+                    <p>
+                      The first thing you’re going to want to do is login to strava and
+                      <a href=http://stravaprofilethingNdevAccount>get yourself a developer account</a>.
+                    </p>
+                    <p>
+                      They’ll ask for some information, such as your app name, a description, your website
+                      where you’re hosting, and a returnTHINFDIHSD. This last one can just be localhost.
+                    </p>
+                    <p>
+                      I know this part is dull and we can't work out any examples (unless you're following along and
+                      writing your own code), but this is barely a bleep in the Strava documentation, so pay attention.
+                    </p>
+                    <table>
+                      <tr>
+                        <td>
+                          <script async src="//https://jsfiddle.net/jikarcz/szvs2smo/embed/js,html/"></script>
+                        </td>
+                        <td>
+                          <p>
+                            What the code on the left is saying, from the start is:
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                    <iframe width="50%" height="300" src="//jsfiddle.net/jikarcz/szvs2smo/embedded/js,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -122,13 +162,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>GETnPOST Section</h1>
+                    <h1>GET it or POST it</h1>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ Contact Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+    <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ request Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
     <section id="request" class="request-section">
         <div class="container">
             <div class="row">
