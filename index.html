@@ -147,14 +147,34 @@
                         </td>
                         <td>
                           <p class="fiddleDescriptor">
-                            What the code on the left is saying, from the start is: </br>
-                            <b>First</b>, myAppID is your app ID (also known as cleint ID) - this is the number given to you by
+                            <h5>What the code on the left is saying, from the start is: </h5>
+                            <b>First</b>, <code>myAppID</code> is your app ID (also known as cleint ID) - this is the number given to you by
                             Strava when you set up your developer account and registered your app </br>
-                            <b>Second</b>, your user ID for Strava. This is optinal since ideally your app will be using your users'
+                            <b>next</b>, your user ID for Strava. This is optinal since ideally your app will be using your users'
                             user IDs here. For testing purposes though, it's easy to use your account as a test case</br>
-                            <b>Third</b>, is the access token. This is a long string of letters and numbers. Strava will give you one
+                            <b>Finally</b>, <code>myAccountToken</code> is the access token. This is a long string of letters and numbers. Strava will give you one
                             to test with your app for your profile when you register your developer account. This section will
-                            show you how to populate this field with one of your apps user's own authentication tokens.</br>
+                            show you how to populate this field with one of your apps user's own authentication tokens.</br></br>
+                            <code><b>authorize</b></code> is an object prototype for the sort of access token you want to use. You don't have a lot of
+                            options here. <code>clint_id</code> is provided to you by Strava for your application, as we said. It's <code>myAppID</code>.
+                            Your <code>redirect_uri</code> is where you want the access token to be sent so you can retrieve it from the
+                            query string and save it. <code>scope</code> refers to what you want to be able to do with the user's information. The authorization-section
+                            request you generate will refelct this.
+                            <ul>
+                              <li><code>public</code> means that you just want access to their public information(no real permissios here)</li>
+                              <li><code>write</code> means that you want to POST to their account. This can be pictures, activity, whatever.</li>
+                              <li><code>view_private</code> means that you want access to all the data in their account, but you won't POST anything.</li>
+                              <li><code>view_private,write</code> means that you want full reading and writing privilages to their account. You can do anything.</li>
+                            </ul>
+                            Now, since POSTS require CORS access, as I mentioned earlier, we're only going to be requesting full read privilages.</br>
+                            As with <code>authorize</code>, <code>athlete</code> represents our primary user and the information we wish to store. Upon successful
+                            authorization of your app, Strava servers will return a JSON object with the user's information. We'll store that here. </br></br>
+                            <b>At last</b>, we're going to make the request. We bind this to our "activation" button in html and send an asynchronous request to
+                            <code>https://www.strava.com/oauth/authorize</code> with all of our variables from the authorization object we created above. Notice
+                            how we used them to build a url address with GET request variables in the line starting with <code>authReq.open...</code></br>
+                            If the request was successful, we get a JSON object containing our primary user's data. We parse that JSON object into <code>authResponse</code>
+                            and use that to create an instance of an athlete named <code>mainUser</code>. We pass the variables from the JSON athlete object back to our
+                            ahtlete constructor to take care of that for us.
                           </p>
                         </td>
                       </tr>
