@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+    <title>How To Use Strava's V3 API</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src= "stravaCode.js" ></script>
 
 </head>
 
@@ -40,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Strava's V3 API</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,13 +52,16 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#basics">The Basics</a> <!-- about -->
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#authorization">Authorization</a> <!-- services? -->
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#GETnPOST">GET & POST</a> <!-- contact -->
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#request">Request from the API</a>
                     </li>
                 </ul>
             </div>
@@ -66,59 +70,82 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Section -->
+    <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ Intro Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
     <section id="intro" class="intro-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+                    <h1>The Strava (V3) API</h1>
+                  </br>
+                    <h3>What's an API?</h3>
+                    <p>
+                      An application program interface (API) is a set of routines, protocols, and tools for building software
+                      applications. An API specifies how software components should interact. Additionally, APIs are used
+                      when programming graphical user interface (GUI) components.
+                    </p>
+                    <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>,
+                      <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth
+                      scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the
+                      link target to a corresponding ID on the page.</p> -->
+                    <!-- <input class="btn btn-default page-scroll" type="submit" id="userAuth" value="Authorize Strava"><br/> -->
+                  </br>
+                    <a class="btn btn-default page-scroll" href="#basics">Lets get this party started!</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ About Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+    <section id="basics" class="basics-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
+                    <h1>basics Section</h1>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
+    <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ Services Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+    <section id="authorization" class="authorization-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1>authorization Section</h1>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ Contact Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+    <section id="GETnPOST" class="GETnPOST-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                    <h1>GETnPOST Section</h1>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- jQuery -->
+    <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ Contact Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+    <section id="request" class="request-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Request from the API</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -{{{{{{{{{{{{{{{{{{{{{{{{{{ jQuery }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}- -->
     <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
+    <!-- -{{{{{{{{{{{{{{{{{ Bootstrap Core JavaScript }}}}}}}}}}}}}}}}}}}}- -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Scrolling Nav JavaScript -->
+    <!-- -{{{{{{{{{{{{{{{{{ Scrolling Nav JavaScript }}}}}}}}}}}}}}}}}}}}- -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
 
