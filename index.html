@@ -199,7 +199,7 @@
                         </td>
                       </tr>
                     </table>
-                    <p></br></br>
+                    <p></br>
                       So what's the purpose of all of this code? Simple. You're going to send Strava something that looks like this:
                       <code>http://www.strava.com/oauth/authorize?client_id=8080&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=write</code>
                       </br>and if you're successfule, they're going to send you something that looks like this:
@@ -236,9 +236,15 @@
                     <p>
                       Info about GET here. Learn more about get requests at <a href="null">thisPlace</a>
                     </p>
+                    <p>
+                      Strava's API allows the following sort of GET requests:
+                    </p>
                     <h3>POST Requests</h3>
                     <p>
                       Info about POST here. Learn more about get requests at <a href="null">thisPlace</a>
+                    </p>
+                    <p>
+                      Strava's API allows the following sorts of POST requests:
                     </p>
                 </div>
             </div>
@@ -251,6 +257,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Make a Request To The API</h1>
+                    <h3>Building our GET request string</h3>
+                    <h3>Sending our GET request</h3>
                 </div>
             </div>
         </div>
@@ -261,6 +269,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Get a Response From The API</h1>
+                    <h3>Opening our JSON object</h3>
+                    <h3>Extracting what we want</h3>
                 </div>
             </div>
         </div>
@@ -271,6 +281,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Use Data From the Response in a Request</h1>
+                    <h3>Apply logic to the response</h3>
+                    <h3>Use the response data in a request</h3>
                 </div>
             </div>
         </div>
@@ -281,6 +293,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Let's Try To Match With Like-Minded Athletes!</h1>
+                    <h3>Continue using response object data to find other Strava athletes that frequent our routes!</h3>
+                    <p>
+                      Since we've already learned how to make query strings and parse responses for the variables we want
+                      lets assume our programming logic built the next few query strings.
+                    </p>
                 </div>
             </div>
         </div>
@@ -301,6 +318,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Lets see our results!</h1>
+                    <h3>match1</h3>
+                    <ul>
+                      <li>Name: </li>
+                      <li>Username: </li>
+                      <li>Profile picture: </li>
+                      <li>Gender: </li>
+                      <li>City: </li>
+                      <li>State: </li>
+                      <li>Premium Membership: </li>
+                      <li>Name: </li>
+
                 </div>
             </div>
         </div>
