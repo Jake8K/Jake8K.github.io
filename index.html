@@ -185,18 +185,10 @@
                       So what's the purpose of all of this code? Simple. You're going to send Strava something that looks like this:
                       <code>http://www.strava.com/oauth/authorize?client_id=8080&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=write</code>
                       </br>and if you're successfule, they're going to send you something that looks like this:
-                       <code>http://localhost/exchange_token?state=&code=c498932e64136c8991a3fb31e3d1dfdf2f859357</code>
-                       We're after this part, <code>c498932e64136c8991a3fb31e3d1dfdf2f859357</code>. The authorization token.
-
-
-                    <!-- <div class="fiddle">
-                      <script async src="//jsfiddle.net/jikarcz/szvs2smo/embed/js,html/"></script>
-                    </div>
-                    <div class="fiddleDescriptor">
-                      <p>
-                        What the Code above says, line by line...
-                      </p>
-                    </div> -->
+                      <code>http://localhost/exchange_token?state=&code=c498932e64136c8991a3fb31e3d1dfdf2f859357</code>
+                      We're after this part, <code>c498932e64136c8991a3fb31e3d1dfdf2f859357</code>. The authorization token. </br></br>
+                      I know thats a lot to process, but combine my example with the information provided by Strava and you should be in good shape.
+                    </p>
                 </div>
             </div>
         </div>
@@ -207,7 +199,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>GET it or POST it</h1>
+                    <h1>JSON can GET it or POST it</h1>
+                    <p>
+                      So, if you're new to this sort of programming, lets back up a little. I'm sure you noticed that our request
+                      url specified <code>'GET'</code> and that I mentioned we got back a JSON object. I also mentioned we couldn't
+                      do any POSTs in this tutorial.</br>Lets go over that briefly.
+                    </p>
+                    <h3>JSON</h3>
+                    <h5><a href="https://en.wikipedia.org/wiki/JSON">Wikipedia Article on JSON</a></h5>
+                    <p>
+                      JSON, or application/json objects is a special javascript object that is commonly used to pass information around
+                      especially in web applications. If you're a fan of smart homes Alexa skills rely heavily on JSON objects. They're great because
+                      we can box up a lot of information and even include attributes, send or receive them, and then parse them out into a string
+                      using something like <code>var result = JSON.stringify(jsonObject)</code> and extract all the attributes we want from that result
+                      variable. We did that in the previous section wiht the response from our user authorization request.
+                    </p>
                 </div>
             </div>
         </div>
