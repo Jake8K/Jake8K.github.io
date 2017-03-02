@@ -40,28 +40,28 @@ of those sections to manage the look and feel of the site. */
 
 .basics-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100;
     text-align: left;
     background: #eee;
 }
 
 .authorization-section {
     height: 100%;
-    padding-top: 150px;
-    text-align: left;
+    padding-top: 100;
+    text-align: center;
     background: #fff;
 }
 
 .GETnPOST-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100;
     text-align: center;
     background: #eee;
 }
 
 .request-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 100;
     text-align: center;
     background: #fff;
 }
