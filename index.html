@@ -241,11 +241,11 @@
                       <p>
                         Strava's API allows the following sort of GET requests:
                         <li>To request the primary user's basic data:
-                          <p>Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
+                          <p class="tab">Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
                           </br>To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a></p>
                         </li>
                         <li>To request the primary user's basic data:
-                          <p>Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></p>
+                          <p class="tab">Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></p>
                           </br>To get a far less detailed JSON object describing the the athlete specified by the userID (number)</p>
                         </li>
                         <li>To request an activity by primary user:
@@ -253,7 +253,7 @@
                           </br>To get <a href="http://strava.github.io/api/v3/activities/">a very detailed JSON object with this particular activity's attributes</a></p>
                         </li>
                         <li>To request all activities by primary user:
-                          <p>Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
+                          <p class="tab">Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
                           </br>To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a></p>
                         </li>
                         <p>
@@ -262,7 +262,7 @@
                           dopcumentation for other possible requests.
                         </p>
                         <p>We can add parameters to the string, as long as one of them is <code>access_token=xyz...</code></p>
-                        <p>
+                        <p class="tab">
                           To add a parameter, we simply place our parameters after the <code>?</code> and seperate them with <code>&</code>s.
                           For example, to get the top 10 athletes of segment number 329857 within the last month for athletes 25-34 years old between 165 and 179 pounds,
                           we would enter <code>...v3/segments/329857/leaderboard?access_token=...&age_group=25_34&weight_class=165_179&date_range=this_month</code>

@@ -136,6 +136,10 @@ of those sections to manage the look and feel of the site. */
 .leftText {
   text-align: left;
 }
+
+.tab {
+  margin-left: 40px;
+}
 /*.crammed {
   padding-top: 150px;
 }*/
