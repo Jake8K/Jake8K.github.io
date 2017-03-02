@@ -218,10 +218,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>JSON can GET it or POST it</h1>
+                    </br>
                     <p>
                       If you're new to this sort of programming, lets back up a little. I'm sure you noticed that our request
                       url specified <code>'GET'</code> and that I mentioned we got back a JSON object. I also mentioned we couldn't
-                      do any POSTs in this tutorial.</br></br>Lets go over that briefly.
+                      do any POSTs in this tutorial so lets examine what they are and why that's not allowed here.</br></br>Lets go over that briefly.
                     </p>
                     <h3>JSON</h3>
                     <p>
@@ -238,6 +239,33 @@
                     </p>
                     <p>
                       Strava's API allows the following sort of GET requests:
+                      <li>To request the primary user's basic data:
+                        <p>Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></p>
+                        <p>To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a></p>
+                      </li>
+                      <li>To request the primary user's basic data:
+                        <p>Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></p>
+                        <p>To get a far less detailed JSON object describing the the athlete specified by the userID (number)</p>
+                      </li>
+                      <li>To request an activity by primary user:
+                        <p>Send: <code>GET https://www.strava.com/api/v3/activities/activityID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></p>
+                        <p>To get <a href="http://strava.github.io/api/v3/activities/">a very detailed JSON object with this particular activity's attributes</a></p>
+                      </li>
+                      <li>To request all activities by primary user:
+                        <p>Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></p>
+                        <p>To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a></p>
+                      </li>
+                      <p>
+                        I Think you get the idea of how it works, we specify that we want to GET something from https://www.strava.com/api/v3/ and
+                        include the primary user's access token after the url of the object we want to retrieve.
+                      </p>
+                      <p>I didn't go over it here, but we can add parameters to the string, as long as one of them is <code>access_token=xyz...</code></p>
+                      <p>
+                        To add a parameter, we simply place our parameters after the <code>?</code> and seperate them with <code>&</code>s.
+                        For example, to get the top 10 athletes of segment number 329857 within the last month for athletes 25-34 years old between 165 and 179 pounds,
+                        we would enter <code>...v3/segments/329857/leaderboard?access_token=...&age_group=25_34&weight_class=165_179&date_range=this_month</code>
+                      </p>
+                      <li>Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</li>
                     </p>
                     <h3>POST Requests</h3>
                     <p>
@@ -258,7 +286,8 @@
                 <div class="col-lg-12">
                     <h1>Make a Request To The API</h1>
                     <h3>Building our GET request string</h3>
-                    
+                    <p>
+                      Let's go over a GET request (since I breezed by the one in the authentication section).
                     <h3>Sending our GET request</h3>
                 </div>
             </div>
@@ -270,6 +299,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Get a Response From The API</h1>
+                    </br>
                     <h3>Opening our JSON object</h3>
                     <h3>Extracting what we want</h3>
                 </div>
@@ -282,6 +312,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Use Data From the Response in a Request</h1>
+                    </br>
                     <h3>Apply logic to the response</h3>
                     <h3>Use the response data in a request</h3>
                 </div>
@@ -294,6 +325,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Let's Try To Match With Like-Minded Athletes!</h1>
+                    </br>
                     <h3>Continue using response object data to find other Strava athletes that frequent our routes!</h3>
                     <p>
                       Since we've already learned how to make query strings and parse responses for the variables we want
