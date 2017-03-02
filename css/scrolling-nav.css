@@ -33,7 +33,7 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
   /*height: 100%;*/
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -59,7 +59,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .GETnPOST-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -67,7 +67,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .request-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -76,7 +76,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .response-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -85,7 +85,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .connections-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -94,7 +94,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .repeat-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -103,7 +103,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .voile-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -112,7 +112,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .results-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -121,7 +121,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .extra-section {
-    height: auto;
+    height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
