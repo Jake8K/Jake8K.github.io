@@ -182,10 +182,10 @@
                       </tr>
                     </table>
                     <p>
-                      So what's the purpose of all of this code? Simple. You're going to send Strava something that looks like this:</br>
+                      So what's the purpose of all of this code? Simple. You're going to send Strava something that looks like this:
                       <code>http://www.strava.com/oauth/authorize?client_id=8080&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=write</code>
-                      </br>and if you're successfule, they're going to send you something that looks like this: </br>
-                       <code>http://localhost/exchange_token?state=&code=c498932e64136c8991a3fb31e3d1dfdf2f859357</code></br>
+                      </br>and if you're successfule, they're going to send you something that looks like this:
+                       <code>http://localhost/exchange_token?state=&code=c498932e64136c8991a3fb31e3d1dfdf2f859357</code>
                        We're after this part, <code>c498932e64136c8991a3fb31e3d1dfdf2f859357</code>. The authorization token.
 
 
