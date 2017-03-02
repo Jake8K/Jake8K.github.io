@@ -144,7 +144,7 @@
                         <td>
                           <div class="fiddleDescriptor">
                             <p>
-                              <h5>What the code on the left is saying, from the start is: </h5>
+                              <h4>What the code on the left is saying, from the start is: </h4>
                               First, <code>myAppID</code> is your app ID (also known as cleint ID) - this is the number given to you by
                               Strava when you set up your developer account and registered your app </br>
                               Next, your user ID for Strava. This is optinal since ideally your app will be using your users'
@@ -181,6 +181,14 @@
                         </td>
                       </tr>
                     </table>
+                    <p>
+                      So what's the purpose of all of this code? Simple. You're going to send Strava something that looks like this:</br>
+                      <code>http://www.strava.com/oauth/authorize?client_id=8080&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=write</code>
+                      </br>and if you're successfule, they're going to send you something that looks like this: </br>
+                       <code>http://localhost/exchange_token?state=&code=c498932e64136c8991a3fb31e3d1dfdf2f859357</code></br>
+                       We're after this part, <code>c498932e64136c8991a3fb31e3d1dfdf2f859357</code>. The authorization token.
+
+
                     <!-- <div class="fiddle">
                       <script async src="//jsfiddle.net/jikarcz/szvs2smo/embed/js,html/"></script>
                     </div>
