@@ -40,7 +40,7 @@ of those sections to manage the look and feel of the site. */
 
 .basics-section {
     height: 100%;
-    padding-top: 100px;
+    padding-top: 150px;
     text-align: center;
     background: #eee;
 }
@@ -48,7 +48,7 @@ of those sections to manage the look and feel of the site. */
 .authorization-section {
     /*height: 100%;*/
      height: auto
-    padding-top: 100px;
+    padding-top: 150px;
     text-align: center;
     background: #fff;
 
@@ -69,6 +69,49 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     background: #fff;
 }
+
+.response-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.connections-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.repeat-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.voile-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.results-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.extra-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
 .fiddleDescriptor {
   text-align: left;
   padding-left: 18px;
