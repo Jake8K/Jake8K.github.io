@@ -46,13 +46,13 @@ of those sections to manage the look and feel of the site. */
 }
 
 .authorization-section {
-    height: 100%;
-    /* height: auto */
+    /*height: 100%;*/
+     height: auto 
     padding-top: 100px;
     text-align: center;
     background: #fff;
 
-    overflow-y: auto
+    /* overflow-y: auto scroll bar if too long*/
 }
 
 .GETnPOST-section {
