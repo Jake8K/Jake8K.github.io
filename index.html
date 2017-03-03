@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>How To Use Strava's V3 API</title>
+    <title>Strava API Helper</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -265,7 +265,7 @@
                         <p class="tab">
                           To add a parameter, we simply place our parameters after the <code>?</code> and seperate them with <code>&</code>s.
                           For example, to get the top 10 athletes of segment number 329857 within the last month for athletes 25-34 years old between 165 and 179 pounds,
-                          we would enter <code>...v3/segments/329857/leaderboard?access_token=...&age_group=25_34&weight_class=165_179&date_range=this_month</code>
+                          we would enter:</br><code>GET ...v3/segments/329857/leaderboard?access_token=...&age_group=25_34&weight_class=165_179&date_range=this_month</code>
                         </p>
                         <li>Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</li>
                       </p>
@@ -291,6 +291,7 @@
                     <h3>Building our GET request string</h3>
                     <p>
                       Let's go over a GET request (since I breezed by the one in the authentication section).
+                    </p>
                     <h3>Sending our GET request</h3>
                 </div>
             </div>
