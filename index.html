@@ -106,6 +106,10 @@
                     <p>
                       Strava’s API documentation is a great resource, especially if your application relies on jQuery. Unfortunately it is a little vague when it comes to Ajax calls. It also doesn’t explain the methods of authorizing a Strava user and retrieving that user’s access token. Additionally, because of the constraints imposed by CORS (Cross Origin Resource Sharing), the browser is prevented from making an Ajax request to a server on a different domain. As a result, we won’t be able to demonstrate the Authorization token exchange, but we’ll go over the basic code anyways. Unfortunately that also means that we’re stuck with my lazy account for the duration of this Strava API coding experience. We also won’t go into POST requests for the same reason, but they’re fairly similar to GETs.
                     </p>
+                  </br>
+                  <p>
+                    Before we get started, the first thing you’re going to want to do is login to strava and get yourself a <a href="https://www.strava.com/settings/api">developer account</a>. Strava will then provide you with your app's client id and client secret. This should go without saying, but that secret is for your eyes only. You will also be awarded your first user access token (for yourself). Make sure to keep your client id, user id, and access token available for later.
+                  </p>
                     <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>,
                       <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth
                       scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the
@@ -169,12 +173,8 @@
                 <div class="col-lg-12">
                     <h1 class="crammed">Authorization</h1>
                     <p>
-                      The first thing you’re going to want to do is login to strava and
-                      <a href=https://www.strava.com/settings/api>get yourself a developer account</a>.
-                      They’ll ask for some information, such as your app name, a description, your website
-                      where you’re hosting, and an authorization callback domain. This last one can just be localhost.
                       I know this part is dull and we can't work out any examples (unless you're following along and
-                      writing your own code), but this is barely a bleep in the Strava documentation, so pay attention.
+                      writing your own code), but this is barely a bleep in the Strava documentation, so pull out your client id and pay attention.
                     </p>
                     <table width="100%" height="600">
                       <tr>
@@ -186,7 +186,7 @@
                           <div class="fiddleDescriptor">
                             <p>
                               <h4>What the code on the left is saying, from the start is: </h4>
-                              First, <code>myAppID</code> is your app ID (also known as cleint ID) - this is the number given to you by
+                              First, <code>myAppID</code> is your app ID (also known as client id) - this is the number given to you by
                               Strava when you set up your developer account and registered your app </br>
                               Next, your user ID for Strava. This is optinal since ideally your app will be using your users'
                               user IDs here. For testing purposes though, it's easy to use your account as a test case</br>
