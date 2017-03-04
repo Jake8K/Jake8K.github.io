@@ -185,7 +185,7 @@
                         <td>
                           <div class="fiddleDescriptor">
                             <p>
-                              <h4>What the code on the left is saying, from the start is: </h4>
+                              <h3>What the code on the left is saying, from the start is: </h3>
                               First, <code>myAppID</code> is your app ID (also known as client id) - this is the number given to you by
                               Strava when you set up your developer account and registered your app </br>
                               Next, your user ID for Strava. This is optinal since ideally your app will be using your users'
@@ -227,7 +227,7 @@
                       <code>http://www.strava.com/oauth/authorize?client_id=8080&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=write</code>
                       </br>and if you're successfule, they're going to send you something that looks like this:
                       <code>http://localhost/exchange_token?state=&code=c498932e64136c8991a3fb31e3d1dfdf2f859357</code>
-                      We're after this part, <code>c498932e64136c8991a3fb31e3d1dfdf2f859357</code>. The authorization token. </br></br>
+                      We're after this part, <code>c498932e64136c8991a3fb31e3d1dfdf2f859357</code>. The authorization token. It will be the first Element of the JSON object you'll receive, the second is the main user's athlete{..} object.</br></br>
                       I know thats a lot to process, but combine my example with the information provided by Strava and you should be in good shape.
                     </p>
                 </div>
@@ -240,66 +240,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>JSON can GET it or POST it</h1>
-                    </br>
-                    <p>
-                      If you're new to this sort of programming, lets back up a little. I'm sure you noticed that our request
-                      url specified <code>'GET'</code> and that I mentioned we got back a JSON object. I also mentioned we couldn't
-                      do any POSTs in this tutorial so lets examine what they are and why that's not allowed here.Lets go over that briefly.
-                    </p>
-                    <h3>JSON</h3>
-                    <p>
-                      JSON, or application/json objects is a special javascript object that is commonly used to pass information around
-                      especially in web applications. If you're a fan of smart homes Alexa skills rely heavily on JSON objects. They're great because
-                      we can box up a lot of information and even include attributes, send or receive them, and then parse them out into a string
-                      using something like <code>var result = JSON.stringify(jsonObject)</code> and extract all the attributes we want from that result
-                      variable. We did that in the previous section wiht the response from our user authorization request. Research JSON to learn
-                      more about application/json objects, <a href="https://en.wikipedia.org/wiki/JSON">Wikipedia</a> is great place to start.
-                    </p>
-                    <h3>GET Requests</h3>
-                    <p>
-                      Info about GET here. Learn more about get requests at <a href="null">thisPlace</a>
-                    </p>
-                    <div class="leftText">
-                      <p>
-                        Strava's API allows the following sort of GET requests:
-                        <li>To request the primary user's basic data:
-                          <p class="tab">Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
-                          </br>To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a></p>
-                        </li>
-                        <li>To request the primary user's basic data:
-                          <p class="tab">Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
-                          </br>To get a far less detailed JSON object describing the the athlete specified by the userID (number)</p>
-                        </li>
-                        <li>To request an activity by primary user:
-                          <p class="tab">Send: <code>GET https://www.strava.com/api/v3/activities/activityID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
-                          </br>To get <a href="http://strava.github.io/api/v3/activities/">a very detailed JSON object with this particular activity's attributes</a></p>
-                        </li>
-                        <li>To request all activities by primary user:
-                          <p class="tab">Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code>
-                          </br>To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a></p>
-                        </li>
-                        <p>
-                          I Think you get the idea of how it works, we specify that we want to GET something from https://www.strava.com/api/v3/ and
-                          include the primary user's access token after the url of the object we want to retrieve. Now that you get the idea, browse the API
-                          dopcumentation for other possible requests.
-                        </p>
-                        <p>We can add parameters to the string, as long as one of them is <code>access_token=xyz...</code></p>
-                        <p class="tab">
-                          To add a parameter, we simply place our parameters after the <code>?</code> and seperate them with <code>&</code>s.
-                          For example, to get the top 10 athletes of segment number 329857 within the last month for athletes 25-34 years old between 165 and 179 pounds,
-                          we would enter:</br><code>GET ...v3/segments/329857/leaderboard?access_token=...&age_group=25_34&weight_class=165_179&date_range=this_month</code>
-                        </p>
-                        <li>Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</li>
-                      </p>
-                    </div>
-                    <h3>POST Requests</h3>
-                    <p>
-                      Info about POST here. Learn more about get requests at <a href="null">thisPlace</a>
-                    </p>
-                    <p>
-                      Strava's API allows the following sorts of POST requests:
-                    </p>
+                  <h1>application/JSON</h1>
+                  </br>
+                  <p>
+                    Lets back up a little and go over JSON objects briefly, in case you're not familiar with them yet.
+                  </p>
+                  <p>Formally:</br>“JSON (<b>JavaScript Object Notation</b>) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999." – <a href= http://www.json.org>JSON.org</a></p>
+                  <p>So, JSON objects are commonly used to pass information around especially in web applications. They're great because we can box up a lot of information and even include attributes of the information. They really can hold a lot of data (for an object) as we’ll see. The developer simply needs to create the object they want to send and pass it to the JSON built in function stringify. So JavaScript object foo is converted to JSON by JSON.stringify(foo). Then, on the receiving end we simply parse the string using JSON’s parse method and assign it to a new JavaScript variable, as in <code>var baz = JSON.parse(data). We’ll go over examples so you can understand why I used the generic data there to represent the response. Start your own research on application/JSON to learn more, <a href="https://en.wikipedia.org/wiki/JSON">Wikipedia</a> is great place to start. (as well as the official <a href= http://www.json.org>JSON.org</a> page, above).</p>
+                  <p>For example, here is a Strava athlete represented as a JSON object (left) and JavaScript object (right). Notice the striking similarity. Basically the only difference is the quotation marks around all the strings (hence JSON.stringify…).</p>
                 </div>
             </div>
         </div>
