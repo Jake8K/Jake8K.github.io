@@ -35,8 +35,7 @@ The padding is very important to make sure the scrollspy picks up the right area
 of those sections to manage the look and feel of the site. */
 
 .intro-section {
-  /*height: 100%;*/
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -44,7 +43,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .basics-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -63,7 +62,6 @@ of those sections to manage the look and feel of the site. */
 }
 
 .GETnPOST-section {
-    height: auto;
     min-height: 100%;
     padding-top: 150px;
     text-align: center;
@@ -72,7 +70,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .request-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -81,7 +79,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .response-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -90,7 +88,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .connections-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -99,7 +97,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .repeat-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -108,7 +106,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .voile-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
@@ -117,7 +115,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .results-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
@@ -126,7 +124,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .extra-section {
-    height: 100%;
+    min-height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #fff;
