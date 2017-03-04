@@ -96,11 +96,15 @@
                     <h1>The Strava (V3) API</h1>
                     <h5><a href=https://strava.github.io/api/>Strava's API Documentation</a></h5>
                     </br>
-                    <h3>What's an API?</h3>
+                    <h3>What's a Strava and why code for it?</h3>
                     <p>
-                      An <b>application program interface (API)</b> is a set of routines, protocols, and tools for building software
-                      applications. An API specifies how software components should interact. Additionally, APIs are used
-                      when programming graphical user interface (GUI) components.
+                      Strava is perhaps the most popular athlete application today. Athletes in all walks of life and in all platform ecosystems have access to it. Whether you’re a triathlete or a swimmer, cycler, or runner. Whether you’re a Garmin, Suunto, Polar, or even just a casual runner with a phone. Strava can import your workout data or track it for you (fortunately for most, Garmin and Strava have a close relationship these days). It makes it easy to track your progress and compete with friends, even join groups and clubs of people in your sport(s).  If you have a premium account, then you have access to even more data metrics, including proprietary Strava metrics like their infamous “suffer score”.
+                    </p>
+                    <p>
+                      What if you want to make an Application that uses that data, or if you simply want a way to read and interpret certain Strava metrics for your own personal pleasures? Then you’re going to head over to their API documentation to figure out how to write your JavaScript code for that.
+                    </p>
+                    <p>
+                      Strava’s API documentation is a great resource, especially if your application relies on jQuery. Unfortunately it is a little vague when it comes to Ajax calls. It also doesn’t explain the methods of authorizing a Strava user and retrieving that user’s access token. Additionally, because of the constraints imposed by CORS (Cross Origin Resource Sharing), the browser is prevented from making an Ajax request to a server on a different domain. As a result, we won’t be able to demonstrate the Authorization token exchange, but we’ll go over the basic code anyways. Unfortunately that also means that we’re stuck with my lazy account for the duration of this Strava API coding experience. We also won’t go into POST requests for the same reason, but they’re fairly similar to GETs.
                     </p>
                     <!-- <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>,
                       <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth
@@ -121,19 +125,37 @@
                 <div class="col-lg-12">
                   <h1>The Basics</h1>
                   </br>
+                  <h3>What's an API?</h3>
                   <p>
-                    Strava’s documentation is a great resource, especially if your application relies on jquery.
-                    Unfortunately it is a little vague when it comes to make http requests. Additionally, because
-                    of the constraints of this “how to”, we are unable to make CORS ( fill this is ) requests.
-                    That means that while I will go over the basics of getting a user’s authentication token, we
-                    won’t be able to implement it. That means we also won’t be able to test this with your account.
-                    Not to worry though, I’ll show you how to do this for yourself. Additionally, we cannot make POST
-                    requests, as that also requires CORS.
-                    We are going to mine your Strava profile for some awesome data though. I’ll also show you how
-                    to implement a search for other users that like to run your route! That will take us pretty far
-                    down the rabbit hole of the API, so I’m confident we’ll learn a few things about the API and its
-                    logic along the way.
+                    An <b>application program interface (API)</b> is a set of routines, protocols, and tools for building software applications. An API specifies how software components should interact. Additionally, APIs are used when programming graphical user interface (GUI) components.
+                    Read more about an <a href="https://en.wikipedia.org/wiki/Application_programming_interface">API</a>
                   </p>
+                  <h3>What is Ajax?</h3>
+                  <p>
+                    AJAX stands for <b>Asynchronous JavaScript and XML</b>. It’s basically the use of the XMLHttpRequest object to communicate with server-side scripts. It can send as well as receive information in a variety of formats, including JSON, XML, HTML, and even text files. We’re going to be using JSON objects, the most commonly implemented format.
+                    Read more about <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a>
+                  </p>
+                  <h3>What's a Request?</h3>
+                  <p>
+                    The Strava API allow GET, POST, PUT, HEAD, and DELETE requests.</br>
+                    <li><b>GET Request Method:</b>
+                      <p>The GET request method requests a representation of the specified resource. GET requests retrieve data and (should) have no other effect. The URL’s query sting  (of the GET request) can include parameters to narrow down or define the element of interest.</p>
+                    </li>
+                    <li><b>POST Request Method:</b>
+                      <p>The POST request method requests that a server accept data enclosed in the body of the request message. Oftentimes this is a form or a file.  Usually this protocol is employed to store data on that server, whether it’s a Facebook post or a workout upload. As part of the POST request an arbitrary amount of data can be sent to the server in the body of the request message.</p>
+                      </li>
+                    <li><b>HEAD Request Method:</b>
+                      <p>The HEAD method asks for a response identical to that of a GET request, but without the response body. This is great for mining metadata.</p>
+                    </li>
+                    <li><b>PUT Request Method:</b>
+                      <p>The PUT method requests that the enclosed entity be stored under the supplied URI. If the URI refers to an already existing resource, it is modified; if the URI does not point to an existing resource, then the server can create the resource with that URI.</p>
+                    </li>
+                    <li><b>DELETE Request Method:</b>
+                      <p>Deletes the specified resource.</p>
+                    </li>
+                    <p>Read more about <a hre="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">HTTP requests</a></p>
+                    <p>Strava’s request protocols employ HTTPS (as opposed to HTTP), which stands for Hyper Text Transfer Protocol Secure. Meaning that unlike http, all communications between the client (browser) and server is encrypted.</br>
+                      We’re going to focus on GET requests because they’re the only ones we can test out right now.</p>
                 </div>
             </div>
         </div>
