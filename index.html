@@ -182,7 +182,7 @@
                   </div>
                   <p>For example, here is a Strava athlete's public data represented as a JSON object (left) and JavaScript object (right). Notice the striking similarity. Basically the only difference is the quotation marks around all the strings (hence JSON.stringify…).</p>
                 </div>
-                </br>
+                <p></br></p>
                 <div>
                   <table>
                   	<tr>
@@ -296,14 +296,13 @@
                           To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a>
                         </p>
                       </br>
-
                       <p>*Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</p>
                     </div>
                     <p>I Think you get the idea of how it works, we specify that we want to GET something from <code>https://www.strava.com/api/v3/… </code> and include the primary user's access token after the url of the object we want to retrieve. </p>
                     <p>To add a parameter, we simply place our parameters after the <code>?</code> and separate them with <code>&</code>s. </p>
                     <p class="leftText">To exemplify everything here, lets build a string in JavaScript get 10 athlete profiles that have completed a segment (we’ll go with segment number 329857) within the last month for athletes 25-34 years old between 165 and 179 pounds:</p>
                     <div>
-                      <h2>REPLACE THIS WITH A FIDDLE!</h2>
+                      <script async src="//jsfiddle.net/jikarcz/2km4qbtw/embed/"></script>
                     </div>
                     <h3>Sending our GET request</h3>
                 </div>
