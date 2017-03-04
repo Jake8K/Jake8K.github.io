@@ -143,6 +143,11 @@ of those sections to manage the look and feel of the site. */
 .tab {
   margin-left: 40px;
 }
+
+table {
+  margin-left:auto;
+  margin-right:auto;
+}
 /*.crammed {
   padding-top: 150px;
 }*/
