@@ -274,12 +274,11 @@
                     <p>
                       The base URL for all Strava GET requests (for the current version V3) is <code>https://www.strava.com/api/v3</code>. We then follow that up with the resource or resources that we are after, any necessary ID numbers, and our parameters. All requests require that we pass the user’s authentication token as a parameter.
                     </p>
+                    </br>
                     <div class="leftText">
-                      <h6>To request the primary user's basic data:</h6>
-                        <p class=“tab”>
-                          Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
-                          To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a>
-                        </p>
+                      <h5>To request the primary user's basic data:</h5>
+                        <p class=“tab”>Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                          To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a></p>
                       <li>To request another user's public profile data:
                         <p class=“tab”>
                           Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
