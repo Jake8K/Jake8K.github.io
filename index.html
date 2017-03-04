@@ -269,50 +269,60 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Make a Request To The API</h1>
-                    <h3>Building our GET request string</h3>
-                    <p>The base URL for all Strava GET requests (for the current version V3) is <code>https://www.strava.com/api/v3</code>. We then follow that up with the resource or resources that we are after, any necessary ID numbers, and our parameters. All requests require that we pass the user’s authentication token as a parameter.</p>
+                  <h1>Make a Request To The API</h1>
+                  <h3>Building our GET request string</h3>
+                  <p>The base URL for all Strava GET requests (for the current version V3) is <code>https://www.strava.com/api/v3</code>. We then follow that up with the resource or resources that we are after, any necessary ID numbers, and our parameters. All requests require that we pass the user’s authentication token as a parameter.</p>
+                  </br>
+                  <div class=leftText>
+                    <p><b>To request the primary user's basic data:</b></p>
+                      <p class=tab >Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                        To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a></p>
+                      </br>
+                    <p><b>To request another user's public profile data:</b></p>
+                      <p class=tab>
+                        Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                        <!-- To get a far less detailed JSON object describing the the athlete specified by the userID (number) -->
+                      </p>
                     </br>
-                    <div class=leftText>
-                      <p><b>To request the primary user's basic data:</b></p>
-                        <p class=tab >Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
-                          To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a></p>
-                        </br>
-                      <p><b>To request another user's public profile data:</b></p>
-                        <p class=tab>
-                          Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
-                          <!-- To get a far less detailed JSON object describing the the athlete specified by the userID (number) -->
-                        </p>
-                      </br>
-                      <p><b>To request an activity by primary user:</b></p>
-                        <p class=tab>
-                          Send: <code>GET https://www.strava.com/api/v3/activities/activityID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
-                          To get <a href="http://strava.github.io/api/v3/activities/">a very detailed JSON object with this particular activity's attributes</a>
-                        </p>
-                      </br>
-                      <p><b>To request all activities by primary user:</b></p>
-                        <p class=“tab”>
-                          Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
-                          To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a>
-                        </p>
-                      </br>
-                      <p>*Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</p>
-                    </div>
-                    <p>I Think you get the idea of how it works, we specify that we want to GET something from <code>https://www.strava.com/api/v3/… </code> and include the primary user's access token after the url of the object we want to retrieve. </p>
-                    <p>To add a parameter, we simply place our parameters after the <code>?</code> and separate them with <code>&</code>s. </p>
-                    <p class="leftText">To exemplify everything here, lets build a string in JavaScript get 10 athlete profiles that have completed a segment (we’ll go with segment number 329857) within the last month for athletes 25-34 years old between 165 and 179 pounds:</p>
-                    <div>
-                      <script async src="//jsfiddle.net/jikarcz/2km4qbtw/embed/"></script>
-                    </div>
-                    <p>The logic you employ to create and assign those variables is up to you, obviously you’re not going to be assigning them like that in your application unless you’re always going to be after the same sort of data. However, assuming you built the logic properly you will have your resource url and parameters list all set to go, now just build a string, like you’re visiting a website. </p>
-                    <p>The logic you employ to create and assign those variables is up to you, obviously you’re not going to be assigning them like that in your application unless you’re always going to be after the same sort of data. However, assuming you built the logic properly you will have your resource url and parameters list all set to go, now just build a string, like you’re visiting a website. </p>
-                    <p><p>
-                    <h3>Sending our GET request</h3>
-                    <p>using the string we built in var urlQuery (https://www.strava.com/api/v3/segments/329857/leaderboard?access_token=...&age_group=25_34&weight_class=165_179&date_range=this_month&per_page=10) we are now going to send our request to strava.</p>
-                    <div>
-                      <script async src="//jsfiddle.net/jikarcz/gpcbu742/embed/js/"></script>
-                    </div>
-                    <p>Lets go over what's happening here.</p>
+                    <p><b>To request an activity by primary user:</b></p>
+                      <p class=tab>
+                        Send: <code>GET https://www.strava.com/api/v3/activities/activityID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                        To get <a href="http://strava.github.io/api/v3/activities/">a very detailed JSON object with this particular activity's attributes</a>
+                      </p>
+                    </br>
+                    <p><b>To request all activities by primary user:</b></p>
+                      <p class=“tab”>
+                        Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                        To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a>
+                      </p>
+                    </br>
+                    <p>*Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</p>
+                  </div>
+                  <p>I Think you get the idea of how it works, we specify that we want to GET something from <code>https://www.strava.com/api/v3/… </code> and include the primary user's access token after the url of the object we want to retrieve. </p>
+                  <p>To add a parameter, we simply place our parameters after the <code>?</code> and separate them with <code>&</code>s. </p>
+                  <p class="leftText">To exemplify everything here, lets build a string in JavaScript get 10 athlete profiles that have completed a segment (we’ll go with segment number 329857) within the last month for athletes 25-34 years old between 165 and 179 pounds:</p>
+                  <div>
+                    <script async src="//jsfiddle.net/jikarcz/2km4qbtw/embed/"></script>
+                  </div>
+                  <p>The logic you employ to create and assign those variables is up to you, obviously you’re not going to be assigning them like that in your application unless you’re always going to be after the same sort of data. However, assuming you built the logic properly you will have your resource url and parameters list all set to go, now just build a string, like you’re visiting a website. </p>
+                  <p>The logic you employ to create and assign those variables is up to you, obviously you’re not going to be assigning them like that in your application unless you’re always going to be after the same sort of data. However, assuming you built the logic properly you will have your resource url and parameters list all set to go, now just build a string, like you’re visiting a website. </p>
+                  <p><p>
+                  <h3>Sending our GET request</h3>
+                  <p>using the string we built in var urlQuery (https://www.strava.com/api/v3/segments/329857/leaderboard?access_token=...&age_group=25_34&weight_class=165_179&date_range=this_month&per_page=10) we are now going to send our request to strava.</p>
+                  <table width="100%" height="600">
+                    <tr>
+                      <td width="50%">
+                        <div>
+                          <iframe width="100%" height="300" src="//jsfiddle.net/jikarcz/gpcbu742/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="fiddleDescriptor">
+                          <p>Lets go over what's happening here.</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
                 </div>
             </div>
         </div>
