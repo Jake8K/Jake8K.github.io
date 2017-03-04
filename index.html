@@ -182,6 +182,7 @@
                   </div>
                   <p>For example, here is a Strava athlete's public data represented as a JSON object (left) and JavaScript object (right). Notice the striking similarity. Basically the only difference is the quotation marks around all the strings (hence JSON.stringify…).</p>
                 </div>
+                </br>
                 <div>
                   <table>
                   	<tr>
@@ -271,8 +272,41 @@
                     <h1>Make a Request To The API</h1>
                     <h3>Building our GET request string</h3>
                     <p>
-                      Let's go over a GET request (since I breezed by the one in the authentication section).
+                      The base URL for all Strava GET requests (for the current version V3) is <code>https://www.strava.com/api/v3</code>. We then follow that up with the resource or resources that we are after, any necessary ID numbers, and our parameters. All requests require that we pass the user’s authentication token as a parameter.
                     </p>
+                    <div class="leftText">
+                      <li>To request the primary user's basic data:
+                        <p class=“tab”>
+                          Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                          To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a>
+                        </p>
+                      </li>
+                      <li>To request another user's public profile data:
+                        <p class=“tab”>
+                          Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                          <!-- To get a far less detailed JSON object describing the the athlete specified by the userID (number) -->
+                        </p>
+                      </li>
+                      <li>To request an activity by primary user:
+                        <p class=“tab”>
+                          Send: <code>GET https://www.strava.com/api/v3/activities/activityID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                          To get <a href="http://strava.github.io/api/v3/activities/">a very detailed JSON object with this particular activity's attributes</a>
+                        </p>
+                      </li>
+                      <li>To request all activities by primary user:
+                        <p class=“tab”>
+                          Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
+                          To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a>
+                        </p>
+                      </li>
+                      <p>*Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</p>
+                    </div>
+                    <p>I Think you get the idea of how it works, we specify that we want to GET something from <code>https://www.strava.com/api/v3/… </code> and include the primary user's access token after the url of the object we want to retrieve. </p>
+                    <p>To add a parameter, we simply place our parameters after the <code>?</code> and separate them with <code>&</code>s. </p>
+                    <p class="leftText">To exemplify everything here, lets build a string in JavaScript get 10 athlete profiles that have completed a segment (we’ll go with segment number 329857) within the last month for athletes 25-34 years old between 165 and 179 pounds:</p>
+                    <div>
+                      <h2>REPLACE THIS WITH A FIDDLE!</h2>
+                    </div>
                     <h3>Sending our GET request</h3>
                 </div>
             </div>
