@@ -277,21 +277,26 @@
                       <p><b>To request the primary user's basic data:</b></p>
                         <p class=tab >Send: <code>GET https://www.strava.com/api/v3/athlete?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
                           To get <a href="http://strava.github.io/api/v3/athlete/">a very detailed JSON object describing the main user (athlete)</a></p>
+                        </br>
                       <p><b>To request another user's public profile data:</b></p>
                         <p class=tab>
                           Send: <code>GET https://www.strava.com/api/v3/athletes/userID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
                           <!-- To get a far less detailed JSON object describing the the athlete specified by the userID (number) -->
                         </p>
+                      </br>
                       <p><b>To request an activity by primary user:</b></p>
                         <p class=tab>
                           Send: <code>GET https://www.strava.com/api/v3/activities/activityID?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
                           To get <a href="http://strava.github.io/api/v3/activities/">a very detailed JSON object with this particular activity's attributes</a>
                         </p>
+                      </br>
                       <p><b>To request all activities by primary user:</b></p>
                         <p class=“tab”>
                           Send: <code>GET https://www.strava.com/api/v3/athlete/activities?access_token=83ebeabdec09f6670863766f792ead24d61fe3f9</code></br>
                           To get <a href="http://strava.github.io/api/v3/activities/">a basic list of all the athlete's activities</a>
                         </p>
+                      </br>
+
                       <p>*Note: in the cases above every ID is a number representing the object you want to retrieve and the access token is unique to the primary Strava user and your application</p>
                     </div>
                     <p>I Think you get the idea of how it works, we specify that we want to GET something from <code>https://www.strava.com/api/v3/… </code> and include the primary user's access token after the url of the object we want to retrieve. </p>
