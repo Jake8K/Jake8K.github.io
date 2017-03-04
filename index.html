@@ -140,7 +140,7 @@
                     Read more about <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a>
                   </p>
                   <h3>What's a Request?</h3>
-                  <p>The Strava API allow GET, POST, PUT, HEAD, and DELETE requests.</p>
+                  <p>The Strava API allows GET, POST, PUT, HEAD, and DELETE requests.</p>
                   <div class="leftText">
                     <li><b>GET Request Method:</b></br>
                       <p class="tab"> The GET request method requests a representation of the specified resource. GET requests retrieve data and (should) have no other effect. The URL’s query sting  (of the GET request) can include parameters to narrow down or define the element of interest.</p>
@@ -349,10 +349,15 @@
                     <p>Recall from the previous section, we created a <code>response</code> object and assigned it the JavaScript (parsed) version of the response to our request. We printed it to the console, but that’s not really useful unless you’re just looking to read your own requests (in which case, you might as well just read your profile page, its much prettier and a lot less work).</p>
                     <p>If we did everything correctly in creating our request url and we’re authorized, we will probably get a response that looks like:</p>
                     <h4>Our response object</h4>
-                    <p><script async src="//jsfiddle.net/jikarcz/rqmh69cp/embed/"></script></p>
+                    <iframe width="100%" height="400" src="//jsfiddle.net/jikarcz/rqmh69cp/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     <p>Though obviously that's a pretty long piece of code, it coult be a lot longer. activity and athlete objects can be incredibly large</p>
                     <p></p>
                     <h3>Extracting what we want</h3>
+                    <p>Obviously that’s a lot of data with a lot of null variables, ID numbers, and probably other junk we don’t care about.</p>
+                    <p>Lets just save the name and time for each athlete, as well as their Strava user ID number in case we want to do something else with their profile later.</p>
+                    <p>It’s easy to sift through the JavaScript object and select what we want, especially knowing what we know form the API documentation.</p>
+                    <p>There are many ways to handle this, depending on what you want to do with it. You can take the response data and use it in an html file directly thought the DOM, you can simply save a singe item to a variable. To illustrate this though, lets just create an object and save the variables to it.</p>
+
                 </div>
             </div>
         </div>
