@@ -157,10 +157,10 @@
                     <li><b>DELETE Request Method:</b>
                       <p class="tab">Deletes the specified resource.</p>
                     </li>
-                  </div>
-                  <p>Read more about <a hre="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">HTTP requests</a></p>
-                  <p>Strava’s request protocols employ HTTPS (as opposed to HTTP), which stands for Hyper Text Transfer Protocol Secure. Meaning that unlike http, all communications between the client (browser) and server is encrypted.</br>
+                    <p>Read more about <a hre="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">HTTP requests</a></p>
+                    <p>Strava’s request protocols employ HTTPS (as opposed to HTTP), which stands for Hyper Text Transfer Protocol Secure. Meaning that unlike http, all communications between the client (browser) and server is encrypted.</br>
                       We’re going to focus on GET requests because they’re the only ones we can test out right now.</p>
+                  </div>
                 </div>
             </div>
         </div>
@@ -318,7 +318,7 @@
                       </td>
                       <td>
                         <div class="fiddleDescriptor">
-                          <p></br></br></p>
+                          <p></br></p>
                           <p>Lets go over what's happening here.</p>
                           <p>
                             First we are creating a new instance of an AJAX request object</br>
@@ -345,7 +345,13 @@
                 <div class="col-lg-12">
                     <h1>Get a Response From The API</h1>
                     </br>
-                    <h3>Opening our JSON object</h3>
+                    <h3>Examining our Response</h3>
+                    <p>Recall from the previous section, we created a <code>response</code> object and assigned it the JavaScript (parsed) version of the response to our request. We printed it to the console, but that’s not really useful unless you’re just looking to read your own requests (in which case, you might as well just read your profile page, its much prettier and a lot less work).</p>
+                    <p>If we did everything correctly in creating our request url and we’re authorized, we will probably get a response that looks like:</p>
+                    <h4>Our response object</h4>
+                    <p><script async src="//jsfiddle.net/jikarcz/rqmh69cp/embed/"></script></p>
+                    <p>Though obviously that's a pretty long piece of code, it coult be a lot longer. activity and athlete objects can be incredibly large</p>
+                    <p></p>
                     <h3>Extracting what we want</h3>
                 </div>
             </div>
