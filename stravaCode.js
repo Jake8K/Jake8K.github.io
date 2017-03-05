@@ -428,3 +428,4 @@ var results = {
 ‪var temp = new publicAthlete(athlete_id, athlete_name, athlete_gender, elapsed_time, distance);‬
 athletes.push(temp);
 ‪}‬
+console.log(athletes);
