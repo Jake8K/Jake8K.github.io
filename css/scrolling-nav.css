@@ -149,6 +149,10 @@ table {
   margin-left:auto;
   margin-right:auto;
 }
+
+th {
+  text-align: center;
+}
 /*.crammed {
   padding-top: 150px;
 }*/
