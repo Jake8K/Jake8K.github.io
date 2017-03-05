@@ -417,7 +417,31 @@
                     </br>
                     <h3>Use The Response Data in a Request</h3>
                     <p>Now lets use the result of the logic above to return the ID number of the segment by requesting that specific activity and extracting the segment ID from that more detailed instance of the activity.</p>
-
+                    <table width="100%">
+                      <tr>
+                        <th>This is the complete activity object</th>
+                        <th>-</th>
+                        <th>This is the part we want</th>
+                      </tr>
+                      <tr>
+                        <td width="45%">
+                          <div>
+                            <iframe width="100%" height="350" src="//jsfiddle.net/jikarcz/hdmjjg1r/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                          </div>
+                        </td>
+                        <iframe width="100%" height="350" src="//jsfiddle.net/jikarcz/agqbropg/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <td>
+                          <div width="45%">
+                            <p></br></p>
+                            <p></p>
+                            <p>
+                              Scroll down and notice the commented line where <code>athlete_count</code> is greater than 0 (just before the map object). This is what we were after!</br>
+                              So, now we save the activity ID number of this activity (<code>"id": 861107201</code>) so we can inspect this particular activity in more detal.
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
                     <h3>We Have Company!</h3>
                     <p>Now that we have the segment ID, lets request the segment leaderboard. Though it’s called a leaderboard, the object we’re receiving is not really an actual leaderboard, without going into it, let it suffice it to say that once an activity us uploaded to strava and a segment included in this “leaderboard” it does not get updated in the server.  So lets only request the names of people that recently completed our segment, Jon Doe might have moved to Australia 2 years ago.</p>
 
