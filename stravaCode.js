@@ -424,7 +424,7 @@ var results = {
 ‪}‬
 
 ‪var athletes[]‬
-‪for(i in results.entries) {‬
+‪for(i in results.entries[]) {‬
 ‪var temp = new publicAthlete(athlete_id, athlete_name, athlete_gender, elapsed_time, distance);‬
 athletes.push(temp);
 ‪}‬
