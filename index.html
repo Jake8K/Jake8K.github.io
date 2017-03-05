@@ -365,7 +365,7 @@
         </div>
     </section>
     <!-- /\/\/\/\/\/\/\/\/\/\/\/\/\ connections Section /\/\/\/\/\/\/\/\/\/\/\/\/\ -->
-    <section id="connections" class="connections-section">
+    <section id="connections" class="connections-section"> <!-- either do later or erase!!!! -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -384,11 +384,26 @@
                 <div class="col-lg-12">
                     <h1>Let's Try To Match With Like-Minded Athletes!</h1>
                     </br>
-                    <h3>Continue using response object data to find other Strava athletes that frequent our routes!</h3>
-                    <p>
-                      Since we've already learned how to make query strings and parse responses for the variables we want
-                      lets assume our programming logic built the next few query strings.
-                    </p>
+                    <p><b>Strava project:</b> we can get all of these various objects from the API but what if we want to know something else, like “what other athletes run our routes?” The documentation doesn't tell us how to go from the primary user to another athlete (not without the athlete's Strava user_id anyways.</p>
+                    <p>So let's go down that rabbit hole. Starting from the start, where the only thing we initially know is the primary user's information to find some local athletes to befriend.</p>
+                    </br>
+                    <h3>Start with the Primary User</h3>
+                    <p>We have access to the primary user’s activities, so we can start there.</p>
+                    <p></p>
+                    </br>
+                    <h3>Apply Logic to the Response</h3>
+                    <p>We all like to swim, bike, and run in different places so our routes are inherently going to differ. But our routes oftentimes will include the same segment. Lets look for activities where the <code>athlete_count</code> > 0, meaning there’s a segment in this athlete’s course.</p>
+                    <p></p>
+                    </br>
+                    <h3>Use The Response Data in a Request</h3>
+                    <p>Now lets use the result of the logic above to return the ID number of the segment by requesting that specific activity and extracting the segment ID from that more detailed instance of the activity.</p>
+
+                    <h3>We Have Company!</h3>
+                    <p>Now that we have the segment ID, lets request the segment leaderboard. Though it’s called a leaderboard, the object we’re receiving is not really an actual leaderboard, without going into it, let it suffice it to say that once an activity us uploaded to strava and a segment included in this “leaderboard” it does not get updated in the server.  So lets only request the names of people that recently completed our segment, Jon Doe might have moved to Australia 2 years ago.</p>
+
+                    <h3>Extract Our Bounty!</h3>
+                    <p>Now that we found what we were after, lets parse it out into JSON objects and save it to our site!</p>
+
                 </div>
             </div>
         </div>
