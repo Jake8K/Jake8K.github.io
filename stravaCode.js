@@ -412,7 +412,7 @@ var results = {
       athlete_profile: "https://dgalywyr863hv.cloudfront.net/pictures/athletes/10045346/3029091/1/large.jpg"
     }
   ]
-};
+}
 ‬
 ‪//publicAthlete object prototype‬
 ‪function publicAthlete (id, name, sex, time, dist) {‬
