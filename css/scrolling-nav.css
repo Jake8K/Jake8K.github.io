@@ -17,6 +17,7 @@ html {
 code {
 color: green;
 }
+
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
