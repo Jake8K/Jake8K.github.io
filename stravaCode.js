@@ -201,7 +201,7 @@ function bindPostButton(){
 }
 ****************/
 
-
+/*
 {
   "id":7063168,
   "username":null,
@@ -251,3 +251,180 @@ function bindPostButton(){
   "max_speed":6.9,"average_cadence":76.9,"average_temp":19.0,"has_heartrate":true,"average_heartrate":162.0,
   "max_heartrate":183.0,"elev_high":124.8,"elev_low":66.6,"pr_count":0,"total_photo_count":0,"has_kudoed":false,
   "workout_type":null}
+  */
+var results = {
+  effort_count: 9,
+  entry_count: 9,
+  neighborhood_count: 1,
+  kom_type: null,
+  entries: [
+    {
+      athlete_name: "Micah Niphakis",
+      athlete_id: 17912159,
+      athlete_gender: "M",
+      average_hr: null,
+      average_watts: null,
+      distance: 960.7,
+      elapsed_time: 310,
+      moving_time: 310,
+      start_date: "2017-03-01T13:43:23Z",
+      start_date_local: "2017-03-01T05:43:23Z",
+      activity_id: 883635296,
+      effort_id: 21515688312,
+      rank: 1,
+      neighborhood_index: 0,
+      athlete_profile: "https://dgalywyr863hv.cloudfront.net/pictures/athletes/17912159/5074148/1/large.jpg"
+    },
+    {
+      athlete_name: "Daniel Commins ⓥ",
+      athlete_id: 3434564,
+      athlete_gender: "M",
+      average_hr: null,
+      average_watts: null,
+      distance: 955.9,
+      elapsed_time: 314,
+      moving_time: 314,
+      start_date: "2017-03-02T15:58:59Z",
+      start_date_local: "2017-03-02T07:58:59Z",
+      activity_id: 885754076,
+      effort_id: 21567947706,
+      rank: 2,
+      neighborhood_index: 0,
+      athlete_profile: "https://dgalywyr863hv.cloudfront.net/pictures/athletes/3434564/1110548/4/large.jpg"
+    },
+    {
+      athlete_name: "Tara Zepel",
+      athlete_id: 10187014,
+      athlete_gender: "F",
+      average_hr: null,
+      average_watts: null,
+      distance: 965,
+      elapsed_time: 314,
+      moving_time: 303,
+      start_date: "2017-03-03T22:33:42Z",
+      start_date_local: "2017-03-03T14:33:42Z",
+      activity_id: 886580144,
+      effort_id: 21586118718,
+      rank: 2,
+      neighborhood_index: 0,
+      athlete_profile: "https://dgalywyr863hv.cloudfront.net/pictures/athletes/10187014/4952185/1/large.jpg"
+    },
+    {
+      athlete_name: "Scott Winn",
+      athlete_id: 19738322,
+      athlete_gender: "M",
+      average_hr: null,
+      average_watts: null,
+      distance: 953.2,
+      elapsed_time: 320,
+      moving_time: 320,
+      start_date: "2017-03-03T17:48:04Z",
+      start_date_local: "2017-03-03T09:48:04Z",
+      activity_id: 886299418,
+      effort_id: 21579226098,
+      rank: 4,
+      neighborhood_index: 0,
+      athlete_profile: "https://graph.facebook.com/v2.2/868467303293132/picture?height=256&width=256"
+    },
+    {
+      athlete_name: "Murat Atilan",
+      athlete_id: 5959556,
+      athlete_gender: "M",
+      average_hr: null,
+      average_watts: null,
+      distance: 955.8,
+      elapsed_time: 334,
+      moving_time: 334,
+      start_date: "2017-03-02T15:57:33Z",
+      start_date_local: "2017-03-02T07:57:33Z",
+      activity_id: 885064918,
+      effort_id: 21552219196,
+      rank: 5,
+      neighborhood_index: 0,
+      athlete_profile: "https://dgalywyr863hv.cloudfront.net/pictures/athletes/5959556/1820683/3/large.jpg"
+    },
+    {
+      athlete_name: "Garrett Sheehan",
+      athlete_id: 7781693,
+      athlete_gender: "M",
+      average_hr: null,
+      average_watts: null,
+      distance: 1162.8,
+      elapsed_time: 355,
+      moving_time: 355,
+      start_date: "2017-03-02T02:49:25Z",
+      start_date_local: "2017-03-01T18:49:25Z",
+      activity_id: 884388688,
+      effort_id: 21538024664,
+      rank: 6,
+      neighborhood_index: 0,
+      athlete_profile: "https://dgalywyr863hv.cloudfront.net/pictures/athletes/7781693/2358910/1/large.jpg"
+    },
+    {
+      athlete_name: "Nick Csicsery",
+      athlete_id: 14150214,
+      athlete_gender: null,
+      average_hr: null,
+      average_watts: null,
+      distance: 970.7,
+      elapsed_time: 366,
+      moving_time: 366,
+      start_date: "2017-03-02T02:29:40Z",
+      start_date_local: "2017-03-01T18:29:40Z",
+      activity_id: 884380356,
+      effort_id: 21537564012,
+      rank: 7,
+      neighborhood_index: 0,
+      athlete_profile: "https://graph.facebook.com/v2.2/10154151852877780/picture?height=256&width=256"
+    },
+    {
+      athlete_name: "Judy Hsia",
+      athlete_id: 20198075,
+      athlete_gender: "F",
+      average_hr: null,
+      average_watts: null,
+      distance: 959.7,
+      elapsed_time: 367,
+      moving_time: 367,
+      start_date: "2017-03-02T02:29:41Z",
+      start_date_local: "2017-03-01T18:29:41Z",
+      activity_id: 884380238,
+      effort_id: 21537557113,
+      rank: 8,
+      neighborhood_index: 0,
+      athlete_profile: "https://graph.facebook.com/v2.2/10208857723293662/picture?height=256&width=256"
+    },
+    {
+      athlete_name: "Sapna Vijay",
+      athlete_id: 10045346,
+      athlete_gender: "F",
+      average_hr: null,
+      average_watts: null,
+      distance: 969.6,
+      elapsed_time: 412,
+      moving_time: 412,
+      start_date: "2017-03-04T16:27:44Z",
+      start_date_local: "2017-03-04T08:27:44Z",
+      activity_id: 887501788,
+      effort_id: 21610215921,
+      rank: 9,
+      neighborhood_index: 0,
+      athlete_profile: "https://dgalywyr863hv.cloudfront.net/pictures/athletes/10045346/3029091/1/large.jpg"
+    }
+  ]
+};
+‬
+‪//publicAthlete object prototype‬
+‪function publicAthlete (id, name, sex, time, dist) {‬
+‪ this.publicID = id;‬
+‪ this.athleteName = name;‬
+‪ this.sex = sex;‬
+‪ this.time = time;‬
+‪ this.distance = dist;‬
+‪}‬
+
+‪var athletes[]‬
+‪for(i in results.entries) {‬
+‪var temp = new publicAthlete(athlete_id, athlete_name, athlete_gender, elapsed_time, distance);‬
+athletes.push(temp);
+‪}‬
