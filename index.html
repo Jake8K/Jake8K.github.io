@@ -358,7 +358,8 @@
                     <p>It’s easy to sift through the JavaScript object and select what we want, especially knowing what we know form the API documentation.</p>
                     <p>There are many ways to handle this, depending on what you want to do with it. You can take the response data and use it in an html file directly thought the DOM, you can simply save a singe item to a variable. To illustrate this though, lets just create an object and save the variables to it.</p>
                     <iframe width="50%" height="400" src="//jsfiddle.net/jikarcz/w5bz1toq/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    <p></p>
+                    <p>What’s happening above is pretty simple. We’re simply creating a public athlete (<code>publicAthlete</code>) object that stores the variables we might be interested int. The distance isn’t always the same, so it helps to equalize everyone if we just divide the time by the distance later, should we want to calculate speed or compare the athletes, similarly, gender might come in handy later.</p>
+                    <p>Then we declare an array named athletes and we simply extract each athletes data variables into a <code>new publicAthlete</code> object (<code>temp</code>) and then push the athlete’s representation in our <code>athletes</code> array.</p>
                 </div>
             </div>
         </div>
